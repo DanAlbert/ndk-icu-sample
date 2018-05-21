@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">ICU4C Sample</string>
+    <string name="pick_date">Pick Date</string>
+
+    <string name="english_date">English Date</string>
+    <string name="arabic_date">Arabic Date</string>
+    <string name="tibetan_date">Tibetan Date</string>
+    <string name="hebrew_date">Hebrew Date</string>
+</resources>
