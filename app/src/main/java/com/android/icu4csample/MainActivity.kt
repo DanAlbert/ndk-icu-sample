@@ -45,9 +45,9 @@ class MainActivity : AppCompatActivity() {
         this.day = day
 
         english_date.text = getDateString(year, month, day, "en_US")
-        arabic_date.text = getDateString(year, month, day, "ar_AE")
-        hebrew_date.text = getDateString(year, month, day, "he_HE")
-        tibetan_date.text = getDateString(year, month, day, "bo_BO")
+        arabic_date.text = getDateString(year, month, day, "ar_AE@calendar=islamic")
+        hebrew_date.text = getDateString(year, month, day, "he_HE@calendar=hebrew")
+        tibetan_date.text = getDateString(year, month, day, "bo_BO@calendar=buddhist")
     }
 
     fun showDatePickerDialog(v: View) {
