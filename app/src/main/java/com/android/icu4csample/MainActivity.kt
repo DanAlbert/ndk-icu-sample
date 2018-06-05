@@ -27,9 +27,9 @@ import java.util.*
 
 
 class MainActivity : AppCompatActivity() {
-    var year = Calendar.getInstance().get(Calendar.YEAR)
-    var month = Calendar.getInstance().get(Calendar.MONTH)
-    var day = Calendar.getInstance().get(Calendar.DAY_OF_MONTH)
+    private var year = Calendar.getInstance().get(Calendar.YEAR)
+    private var month = Calendar.getInstance().get(Calendar.MONTH)
+    private var day = Calendar.getInstance().get(Calendar.DAY_OF_MONTH)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -62,7 +62,7 @@ class MainActivity : AppCompatActivity() {
      * A native method that is implemented by the 'native-lib' native library,
      * which is packaged with this application.
      */
-    external fun getDateString(year: Int, month: Int, day: Int, locale: String): String
+    private external fun getDateString(year: Int, month: Int, day: Int, locale: String): String
 
     companion object {
 
