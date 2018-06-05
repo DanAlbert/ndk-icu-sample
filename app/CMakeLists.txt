@@ -16,7 +16,6 @@ add_library(app
 target_compile_options(app
   PRIVATE
     -std=c++17
-    -DU_DISABLE_RENAMING=1
 )
 
 target_link_libraries(app
