@@ -20,9 +20,15 @@
 
 #define LOG_TAG "ICU4CSample"
 
-#define ALOGD(fmt, ...) __android_log_print(ANDROID_LOG_DEBUG, LOG_TAG, fmt, __VA_ARGS__)
-#define ALOGF(fmt, ...) __android_log_print(ANDROID_LOG_FATAL, LOG_TAG, fmt, __VA_ARGS__)
-#define ALOGE(fmt, ...) __android_log_print(ANDROID_LOG_ERROR, LOG_TAG, fmt, __VA_ARGS__)
-#define ALOGI(fmt, ...) __android_log_print(ANDROID_LOG_INFO, LOG_TAG, fmt, __VA_ARGS__)
-#define ALOGV(fmt, ...) __android_log_print(ANDROID_LOG_VERBOSE, LOG_TAG, fmt, __VA_ARGS__)
-#define ALOGW(fmt, ...) __android_log_print(ANDROID_LOG_WARN, LOG_TAG, fmt, __VA_ARGS__)
+#define ALOGD(fmt, ...) \
+  __android_log_print(ANDROID_LOG_DEBUG, LOG_TAG, fmt, __VA_ARGS__)
+#define ALOGF(fmt, ...) \
+  __android_log_print(ANDROID_LOG_FATAL, LOG_TAG, fmt, __VA_ARGS__)
+#define ALOGE(fmt, ...) \
+  __android_log_print(ANDROID_LOG_ERROR, LOG_TAG, fmt, __VA_ARGS__)
+#define ALOGI(fmt, ...) \
+  __android_log_print(ANDROID_LOG_INFO, LOG_TAG, fmt, __VA_ARGS__)
+#define ALOGV(fmt, ...) \
+  __android_log_print(ANDROID_LOG_VERBOSE, LOG_TAG, fmt, __VA_ARGS__)
+#define ALOGW(fmt, ...) \
+  __android_log_print(ANDROID_LOG_WARN, LOG_TAG, fmt, __VA_ARGS__)

@@ -21,16 +21,17 @@
 #include <jni.h>
 
 class JNIString {
-public:
-    JNIString(JNIEnv* env, jstring java_string);
-    ~JNIString();
+ public:
+  JNIString(JNIEnv* env, jstring java_string);
+  ~JNIString();
 
-    const char* str() const;
+  const char* str() const;
 
-private:
-    JNIEnv* env_;
-    jstring java_string_;
-    const char* string_;
+ private:
+  JNIEnv* env_;
+  jstring java_string_;
+  const char* string_;
 };
 
-int JNIThrowExceptionFmt(JNIEnv* env, const char* className, const char* fmt, ...);
+int JNIThrowExceptionFmt(JNIEnv* env, const char* className, const char* fmt,
+                         ...);

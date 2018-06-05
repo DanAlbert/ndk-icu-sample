@@ -21,15 +21,19 @@
 #include "jnihelpers.h"
 
 extern "C" JNIEXPORT jstring JNICALL
-Java_com_android_icu4csample_MainActivity_getDateString(
-        JNIEnv *env,  jobject /* this */, int year, int month, int day, jstring jlocale) {
-    JNIString locale(env, jlocale);
+Java_com_android_icu4csample_MainActivity_getDateString(JNIEnv* env,
+                                                        jobject /* this */,
+                                                        int year, int month,
+                                                        int day,
+                                                        jstring jlocale) {
+  JNIString locale(env, jlocale);
 
-    try {
-        UDate date = MakeUDate(year, month, day);
-        return env->NewStringUTF(DateToString(date, locale.str()).c_str());
-    } catch (const ICUException& ex) {
-        JNIThrowExceptionFmt(env, "java/lang/RuntimeException", "ICU Error: %s", ex.what());
-        return nullptr;
-    }
+  try {
+    UDate date = MakeUDate(year, month, day);
+    return env->NewStringUTF(DateToString(date, locale.str()).c_str());
+  } catch (const ICUException& ex) {
+    JNIThrowExceptionFmt(env, "java/lang/RuntimeException", "ICU Error: %s",
+                         ex.what());
+    return nullptr;
+  }
 }

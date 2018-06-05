@@ -23,8 +23,8 @@
 #include <unicode/udat.h>
 
 class ICUException : public std::runtime_error {
-public:
-    ICUException(const UErrorCode error);
+ public:
+  ICUException(const UErrorCode error);
 };
 
 UDate MakeUDate(int year, int month, int day);
